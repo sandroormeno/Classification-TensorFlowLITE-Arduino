@@ -65,7 +65,8 @@ El [sketch](https://github.com/sandroormeno/Classification-TensorFlowLITE-Arduin
 <img src="files/image_5.png" title="" alt="imagen" data-align="center"> 
 
 ```arduino
-// Convert Pin values to byte values for pins 0-7 of incoming pixel byte
+
+       // Convert Pin values to byte values for pins 0-7 of incoming pixel byte
         PinVal7 = ConvertPinValueToByteValue(digitalRead(DO7), 7);
         PinVal6 = ConvertPinValueToByteValue(digitalRead(DO6), 6);
         PinVal5 = ConvertPinValueToByteValue(digitalRead(DO5), 5);
