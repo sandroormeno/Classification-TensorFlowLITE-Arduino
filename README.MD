@@ -32,7 +32,7 @@ El [sketch](https://github.com/sandroormeno/Classification-TensorFlowLITE-Arduin
 | RCLK       | 26              |
 | DO0-DO7    | D35-D28         |
 
-```arduino
+```c++
        0                          784                          784
      0 +----------------------------+----------------------------+------//--
        |                            |                            |
