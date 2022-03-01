@@ -19,8 +19,6 @@ model.add(layers.Dense(num_classes,activation='softmax'))
 
 <img src="files/image_3.png" title="" alt="imagen" data-align="center">
 
-<img src="files/image_4.png" alt="imagen" data-align="center">
-
 El [sketch](https://github.com/sandroormeno/Classification-TensorFlowLITE-Arduino/blob/0c3441defa973de3bd20a0a98503a8cd36b578dc/files/TensorFlow_fruit_Class_7_60x60/TensorFlow_fruit_Class_7_60x60.ino) de Arduino contiene el código para interpretar el modelo entrenado previamente y capturar imágenes de la cámara __OV7670__ gracias a una versión adaptada (modificación de registros) para obtener imágenes cuadradas de 60x60 pixeles (__QQQVGA__) en formato __rgb565__. 
 
 | __OV7670__ | __Arduino DUE__ |
@@ -60,50 +58,6 @@ El [sketch](https://github.com/sandroormeno/Classification-TensorFlowLITE-Arduin
   OV7670WriteReg(VSTOP, 488 >> 2 );
   OV7670WriteReg(VREF, ((488 & 0b11) << 2) | (8 & 0b11));
   
-```
-
-```c++
-
-   // Convert Pin values to byte values for pins 0-7 of incoming pixel byte
-   PinVal7 = ConvertPinValueToByteValue(digitalRead(DO7), 7);
-   PinVal6 = ConvertPinValueToByteValue(digitalRead(DO6), 6);
-   PinVal5 = ConvertPinValueToByteValue(digitalRead(DO5), 5);
-   PinVal4 = ConvertPinValueToByteValue(digitalRead(DO4), 4);
-   PinVal3 = ConvertPinValueToByteValue(digitalRead(DO3), 3);
-   PinVal2 = ConvertPinValueToByteValue(digitalRead(DO2), 2);
-   PinVal1 = ConvertPinValueToByteValue(digitalRead(DO1), 1);
-   PinVal0 = ConvertPinValueToByteValue(digitalRead(DO0), 0);
-
-   // Combine individual data from each pin into composite data in the form of a single byte
-   PixelData = PinVal7 | PinVal6 | PinVal5 | PinVal4 | PinVal3 | PinVal2 | PinVal1 | PinVal0;
-
-   Serial.write(PixelData);
-         
-   float data = 0.0;
-   int8_t quantized;
-   if (bytenumber == 0){
-      pix_hi = PixelData;
-   }else{
-      pix_lo = PixelData;
-      r = (0xF8 & pix_hi); 
-      v = ((0x07 & pix_hi) << 5) | ((0xE0 & pix_lo) >> 3);
-      a = (0x1F & pix_lo) << 3;
-      data = r / 255.0;
-      quantized = data / input_scale + input_zero_point;
-      input->data.int8[i] = quantized;
-      i++;
-  
-      data = v / 255.0;
-      quantized = data / input_scale + input_zero_point;
-      input->data.int8[i] = quantized;
-      i++;
-
-      data = a / 255.0;
-      quantized = data / input_scale + input_zero_point;
-      input->data.int8[i] = quantized;
-      i++;
-    }
-        
 ```
 
 En esta oportunidad elegí la biblioteca __EloquentTinyML__ versión __0.0.7__ para reconocer el modelo. Las versiones más recientes no tienen soporte para microcontroladores ARM 32bits como el Arduino DUE.
