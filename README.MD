@@ -17,9 +17,9 @@ model.add(layers.Dense(6, activation='relu'))
 model.add(layers.Dense(num_classes,activation='softmax'))
 ```
 
-<img src="file:///C:/Users/Sandro_Alex/Desktop/data/Clasificacion%20de%20imágenes%20con%20TensorFlowLITE%20y%20Arduino/git/image_3.png" title="" alt="imagen" data-align="center">
+<img src="files/image_3.png" title="" alt="imagen" data-align="center">
 
-<img title="" src="file:///C:/Users/Sandro_Alex/Desktop/data/Clasificacion de imágenes con TensorFlowLITE y Arduino/git/image_4.png" alt="imagen" data-align="center">
+<img src="files/image_4.png" alt="imagen" data-align="center">
 
 El sketch de Arduino contiene el código para interpretar el modelo entrenado previamente y capturar imágenes de la cámara __OV7670__ gracias a una versión adaptada (modificación de registros) para obtener imágenes cuadradas de 60x60 pixeles (__QQQVGA__) en formato __rgb565__. 
 
@@ -50,12 +50,12 @@ El sketch de Arduino contiene el código para interpretar el modelo entrenado pr
                    Frame 1                      Frame 2
 ```
 
-<img src="file:///C:/Users/Sandro_Alex/Desktop/data/Clasificacion%20de%20imágenes%20con%20TensorFlowLITE%20y%20Arduino/git/image_5.png" title="" alt="imagen" data-align="center"> 
+<img src="files/image_5.png" title="" alt="imagen" data-align="center"> 
 
 En esta oportunidad elegí la biblioteca __EloquentTinyML__ versión __0.0.7__ para reconocer el modelo. Las versiones más recientes no tienen soporte para microcontroladores ARM 32bits como el Arduino DUE.
 
-<img title="" src="file:///C:/Users/Sandro_Alex/Desktop/data/Clasificacion%20de%20imágenes%20con%20TensorFlowLITE%20y%20Arduino/git/image_6.png" alt="imagen" data-align="center">
+<img title="" src="files/image_6.png" alt="imagen" data-align="center">
 
 El sketch de __Processing 3__ tiene el código para la comunicación con el Arduino por medio del puerto serial. Esto permite tomar las fotos y hacer la inferencia. Además, muestra una versión gráfica y resumida de los resultados para efectos didácticos.
 
-<img src="file:///C:/Users/Sandro_Alex/Desktop/data/Clasificacion%20de%20imágenes%20con%20TensorFlowLITE%20y%20Arduino/git/image_7.png" title="" alt="imagen" data-align="center">
+<img src="files/image_7.png" title="" alt="imagen" data-align="center">
