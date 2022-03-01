@@ -6,7 +6,7 @@ El [notebook](https://github.com/sandroormeno/Classification-TensorFlowLITE-Ardu
 
 Los datos están formados por 360 imágenes en color de 120x120 pixeles en dos clases y seleccionadas de google y editadas en __Photoshop__ para mostrar el objetivo centrado (las frutas). Estas son finalmente redimensionadas (con código) a 60x60 y son modificadas con cambio de contraste y saturación aleatoria, además de usar __RandomCrop__ para el proceso de aumentación de datos.
 
-![imagen](files/image_1.jpg)
+![imagen](files/image_2.jpg)
 
 El modelo es muy simple: incluye una capa convolucional, una flatten y dos capas densas. La precisión obtenida alcanza el 94%. Finalmente, el modelo tiene 75,416 parámetros y ocupa casi 79Kbytes después del proceso de cuantización. 
 
@@ -62,8 +62,6 @@ El [sketch](https://github.com/sandroormeno/Classification-TensorFlowLITE-Arduin
   
 ```
 
-<img src="files/image_5.png" title="" alt="imagen" data-align="center"> 
-
 ```c++
 
    // Convert Pin values to byte values for pins 0-7 of incoming pixel byte
@@ -109,8 +107,6 @@ El [sketch](https://github.com/sandroormeno/Classification-TensorFlowLITE-Arduin
 ```
 
 En esta oportunidad elegí la biblioteca __EloquentTinyML__ versión __0.0.7__ para reconocer el modelo. Las versiones más recientes no tienen soporte para microcontroladores ARM 32bits como el Arduino DUE.
-
-<img title="" src="files/image_6.png" alt="imagen" data-align="center">
 
 El [sketch](https://github.com/sandroormeno/Classification-TensorFlowLITE-Arduino/blob/0c3441defa973de3bd20a0a98503a8cd36b578dc/files/TensorFlow_fruit_Class_7_60x60_processing/TensorFlow_fruit_Class_7_60x60_processing.pde) de __Processing 3__ tiene el código para la comunicación con el Arduino por medio del puerto serial. Esto permite tomar las fotos y hacer la inferencia. Además, muestra una versión gráfica y resumida de los resultados para efectos didácticos.
 
