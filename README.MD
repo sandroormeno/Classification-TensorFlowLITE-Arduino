@@ -2,7 +2,7 @@
 
 Este repositorio contiene código que permite deducir la clasificación de imágenes de dos tipos de frutas: manzanas y naranjas. El Modelo se entrenó con imágenes de 60 por 60 pixeles en __Colab__ y se desplegó en un __Arduino DUE__ vinculado a una cámara __OV7670__ con FIFO. Para la implementación se usó __TensorFlow(2.3.0).__
 
-El notebook contiene el código de entrenamiento. Inicialmente se indica la instalación de TensorFlow versión 2.3.0 que es compatible con la biblioteca necesaria para implementar el modelo en el entorno de __Arduino__ y sistemas **ARM 32bits (Arduino DUE).**
+El [notebook](files/fruit_load_files_and training new tf_color V5.ipynb) contiene el código de entrenamiento. Inicialmente se indica la instalación de TensorFlow versión 2.3.0 que es compatible con la biblioteca necesaria para implementar el modelo en el entorno de __Arduino__ y sistemas **ARM 32bits (Arduino DUE).**
 
 Los datos están formados por 360 imágenes en color de 120x120 pixeles en dos clases y seleccionadas de google y editadas en __Photoshop__ para mostrar el objetivo centrado (las frutas). Estas son finalmente redimensionadas (con código) a 60x60 y son modificadas con cambio de contraste y saturación aleatoria, además de usar __RandomCrop__ para el proceso de aumentación de datos.
 
