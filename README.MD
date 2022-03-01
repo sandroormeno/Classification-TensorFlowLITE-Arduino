@@ -6,7 +6,7 @@ El notebook contiene el código de entrenamiento. Inicialmente se indica la inst
 
 Los datos están formados por 360 imágenes en color de 120x120 pixeles en dos clases y seleccionadas de google y editadas en __Photoshop__ para mostrar el objetivo centrado (las frutas). Estas son finalmente redimensionadas (con código) a 60x60 y son modificadas con cambio de contraste y saturación aleatoria, además de usar __RandomCrop__ para el proceso de aumentación de datos.
 
-![imagen](C:\Users\Sandro_Alex\Desktop\data\Clasificacion%20de%20imágenes%20con%20TensorFlowLITE%20y%20Arduino\git\image_1.jpg)
+![imagen](\files\image_1.jpg)
 
 El modelo es muy simple: incluye una capa convolucional, una flatten y dos capas densas. La precisión obtenida alcanza el 94%. Finalmente, el modelo tiene 75,416 parámetros y ocupa casi 79Kbytes después del proceso de cuantización. 
 
