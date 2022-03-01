@@ -6,7 +6,7 @@ El [notebook](https://github.com/sandroormeno/Classification-TensorFlowLITE-Ardu
 
 Los datos están formados por 360 imágenes en color de 120x120 pixeles en dos clases y seleccionadas de google y editadas en __Photoshop__ para mostrar el objetivo centrado (las frutas). Estas son finalmente redimensionadas (con código) a 60x60 y son modificadas con cambio de contraste y saturación aleatoria, además de usar __RandomCrop__ para el proceso de aumentación de datos.
 
-![imagen](files/image_2.jpg)
+![imagen](files/image_2.png)
 
 El modelo es muy simple: incluye una capa convolucional, una flatten y dos capas densas. La precisión obtenida alcanza el 94%. Finalmente, el modelo tiene 75,416 parámetros y ocupa casi 79Kbytes después del proceso de cuantización. 
 
