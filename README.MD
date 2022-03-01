@@ -49,17 +49,16 @@ El [sketch](https://github.com/sandroormeno/Classification-TensorFlowLITE-Arduin
    510 +----------------------------+----------------------------+------//--
                    Frame 1                      Frame 2
                    
-                   
-  // here is where i have to work
+
   int hStart = 320;
   int hStop = 16; 
-  // Change Window Output parameters after custom scaling
-  OV7670WriteReg(HSTART, hStart >> 3); //0x13 HSTART_VALUE_QVGA
-  OV7670WriteReg(HSTOP, hStop >> 3 ); //HSTOP_VALUE_QVGA
-  OV7670WriteReg(HREF, ((hStop & 0b111) << 3) | (hStart & 0b111));  //HREF_VALUE_QVGA
-  OV7670WriteReg(VSTRT, 8 >> 2); //VSTRT_VALUE_QVGA
-  OV7670WriteReg(VSTOP, 488 >> 2 ); //VSTOP_VALUE_QVGA
-  OV7670WriteReg(VREF, ((488 & 0b11) << 2) | (8 & 0b11)); //VREF_VALUE_QVGA
+
+  OV7670WriteReg(HSTART, hStart >> 3); 
+  OV7670WriteReg(HSTOP, hStop >> 3 );
+  OV7670WriteReg(HREF, ((hStop & 0b111) << 3) | (hStart & 0b111)); 
+  OV7670WriteReg(VSTRT, 8 >> 2);
+  OV7670WriteReg(VSTOP, 488 >> 2 );
+  OV7670WriteReg(VREF, ((488 & 0b11) << 2) | (8 & 0b11));
   
 ```
 
