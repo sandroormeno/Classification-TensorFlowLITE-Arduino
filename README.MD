@@ -1,5 +1,7 @@
 ### Clasificación de imágenes con TensorFlow y Arduino
 
+![imagen](files/image_0.png)
+
 Este repositorio contiene código que permite deducir la clasificación de imágenes de dos tipos de frutas: manzanas y naranjas. El Modelo se entrenó con imágenes de 60 por 60 pixeles en __Colab__ y se desplegó en un __Arduino DUE__ vinculado a una cámara __OV7670__ con FIFO. Para la implementación se usó __TensorFlow(2.3.0).__
 
 El [notebook](https://github.com/sandroormeno/Classification-TensorFlowLITE-Arduino/blob/0d3c36e608e721dc5f2de2a8becad5b883f04d60/files/fruit_load_files_and%20training%20new%20tf_color%20V5.ipynb) contiene el código de entrenamiento. Inicialmente se indica la instalación de TensorFlow versión 2.3.0 que es compatible con la biblioteca necesaria para implementar el modelo en el entorno de __Arduino__ y sistemas **ARM 32bits (Arduino DUE).**
